@@ -21,6 +21,6 @@
 
     <div class="wallpaper">
         <img src="./conf/imgs/pizzawallpaper.jpg" alt="Minha Figura">
-    </div>
+    </div> 
 </body>
 </html>
