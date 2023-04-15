@@ -1,0 +1,75 @@
+.cabecalho{
+    background-color: #F5F5F5;
+    position: fixed;
+    width: 100%;    
+    -webkit-box-shadow: 0px 15px 14px 0px rgba(0,0,0,0.13);
+    -moz-box-shadow: 0px 15px 14px 0px rgba(0,0,0,0.13);
+    box-shadow: 0px 15px 14px 0px rgba(0,0,0,0.13);
+}
+.divlogo {
+    width: 60%;
+    padding-left: 5%;
+    min-height: 10vh;
+    display: inline-block;
+    text-align: left;
+}
+.divlogo h1 {
+    font-size: 7vh;
+    display: inline-block;
+    margin-top: 1vh;
+    margin-bottom: 0vh;
+}
+
+.divlogo img {
+    display: inline-block;
+    width: 6vh;
+    height: 6vh;
+}
+
+.divisor {
+    margin-top: 10vh;
+    width: 100%;
+    height: 1vh;
+    background: #F5F5F5;
+    position: fixed;
+}
+
+
+.login{
+    margin-right: 10%;
+    top: 0;
+    position: fixed;
+    right: 0;
+    width: 25%;
+    text-align: right;
+    display: inline-block;
+}
+
+.login p{
+    font-style: italic;
+    color:#808080;
+    display: inline-block;
+    margin-top: 0px;
+}
+
+.login a, a:visited{
+    border-left: black solid 5px;
+    margin-left: 10px;
+    padding-left: 7px;
+    padding-bottom: 2px;
+    margin-top: 0px;
+    font-size: 20px;
+    text-decoration: solid;
+    color: black;
+    display: inline-block;
+}
+
+.login a:hover{
+    border-left: #EC7063 solid 5px;
+    color: #EC7063 ;
+}
+
+#espaco{
+    height: 11vh;
+    width: 100%;
+}

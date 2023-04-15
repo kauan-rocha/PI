@@ -1,0 +1,13 @@
+
+@font-face {
+    font-family: montserratfont;
+    src:url("./font/Montserrat-Regular.ttf");
+}
+
+body{
+    font-family: montserratfont;
+}
+
+html{
+    background: #F5F5F5;
+}
