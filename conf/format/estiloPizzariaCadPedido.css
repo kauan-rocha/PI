@@ -52,3 +52,107 @@ mark{
     box-shadow: 0px -3px 8px 0px rgba(0,0,0,0.13);
 }
 
+.formCliente{
+    -webkit-box-shadow: 0px 3px 8px 0px rgba(0,0,0,0.13);
+    -moz-box-shadow: 0px 3px 8px 0px rgba(0,0,0,0.13);
+    box-shadow: 0px 3px 8px 0px rgba(0,0,0,0.13);
+    border-radius: 11px 11px 11px 11px;
+    -webkit-border-radius: 11px 11px 11px 11px;
+    -moz-border-radius: 11px 11px 11px 11px;
+    background-color: #F0F0F0;
+    width: 90%;
+    margin: 2%;
+    padding: 3%;
+    padding-top: 5px;
+    padding-bottom: 2%;
+}
+
+form{
+    width: 100%;
+}
+
+h3{
+    margin: 0px;
+    padding: 0px;
+}
+
+form span{
+    display: inline-block;
+}
+
+label{
+    display:block;
+}
+input{
+    display:block;
+    border: none;
+    border-bottom: solid 1px;
+}
+
+button{
+    min-width: 90px;
+    padding: 7px;
+    border-radius: 11px 11px 11px 11px;
+    -webkit-border-radius: 11px 11px 11px 11px;
+    -moz-border-radius: 11px 11px 11px 11px;
+}
+
+.formPizza{
+    -webkit-box-shadow: 0px 3px 8px 0px rgba(0,0,0,0.13);
+    -moz-box-shadow: 0px 3px 8px 0px rgba(0,0,0,0.13);
+    box-shadow: 0px 3px 8px 0px rgba(0,0,0,0.13);
+    border-radius: 11px 11px 11px 11px;
+    -webkit-border-radius: 11px 11px 11px 11px;
+    -moz-border-radius: 11px 11px 11px 11px;
+    background-color: #F0F0F0;
+    width: 90%;
+    margin: 2%;
+    padding: 3%;
+    padding-top: 5px;
+    padding-bottom: 2%;
+}
+
+#fcomplementoPizza{
+    width: 80%;
+    float: right;
+    background-color: white;
+    padding: 1%;
+}
+
+#fbutAddPizz{ 
+    border: solid 1px;
+    margin-right: 20px;
+    float: right;
+    min-width: 90px;
+    padding: 7px;
+    border-radius: 11px 11px 11px 11px;
+    -webkit-border-radius: 11px 11px 11px 11px;
+    -moz-border-radius: 11px 11px 11px 11px;
+}
+
+.formBebida{
+    -webkit-box-shadow: 0px 3px 8px 0px rgba(0,0,0,0.13);
+    -moz-box-shadow: 0px 3px 8px 0px rgba(0,0,0,0.13);
+    box-shadow: 0px 3px 8px 0px rgba(0,0,0,0.13);
+    border-radius: 11px 11px 11px 11px;
+    -webkit-border-radius: 11px 11px 11px 11px;
+    -moz-border-radius: 11px 11px 11px 11px;
+    background-color: #F0F0F0;
+    width: 90%;
+    margin: 2%;
+    padding: 3%;
+    padding-top: 5px;
+    padding-bottom: 2%;
+}
+
+
+#fbutAddBebida{
+    border: solid 1px;
+    margin-right: 20px;
+    float: right;
+    min-width: 90px;
+    padding: 7px;
+    border-radius: 11px 11px 11px 11px;
+    -webkit-border-radius: 11px 11px 11px 11px;
+    -moz-border-radius: 11px 11px 11px 11px;
+}
