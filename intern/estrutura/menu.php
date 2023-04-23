@@ -10,10 +10,10 @@
             <ul>
                 <?php 
                     //Array com os códigos de perfis permitidos para cada menu.
-                    $menuCadPedido = array(0,1);
-                    $menuPedidos = array(0,1,2);
-                    $menuAdmin = array(0,2);
-                    $menuCardapio = array(0,3);
+                    $menuCadPedido = array("GER","OPE");
+                    $menuPedidos = array("GER","OPE","FIN");
+                    $menuAdmin = array("GER");
+                    $menuCardapio = array("GER","LOG");
 
                     //If para validar se o perfil do usuário logado libera o menu.
                     echo  in_array($_SESSION["sessaoPerfil"], $menuCadPedido) ? "<li><a href='cadastropedido.php'><i class='fa-solid fa-pizza-slice'></i> Cadastro de Pedidos</a></li>" : "";
