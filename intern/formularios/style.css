@@ -1,0 +1,109 @@
+@charset "UTF-8";
+
+/* cadastro de funcionario*/
+body{ background-color: #FAE775;
+
+}
+
+h1{ color: #DB521A;
+    text-shadow: 4px 1px 3px whitesmoke;
+
+}
+
+.title{ height: 43px;
+    background-color: #FAE775;
+    position: relative;
+    bottom: 0px;
+}
+
+.cadastro{
+    position: relative;
+    background-color: #D9AA3F;
+    font-family: 'Sigmar', cursive;
+    margin: auto;
+    height: 335px;
+    border: solid;
+    border-radius: 15px;
+    width: 558px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    bottom: -49px;
+}
+
+h1{ text-align: center;
+    font-family: 'Sigmar', cursive;
+
+    
+}
+
+.nome{
+        position: relative;
+        left: -105px;
+    }
+
+.cpf{
+    position: relative;
+    left: -115px;
+}
+
+.senha{
+    position: relative;
+    left: -105px;
+}
+
+.confirmarsenha{
+    position: relative;
+    left: -60px;
+}
+
+.grupofuncional{
+    position: relative;
+    left: -25px;
+}
+
+.btn.btn-primary{
+    bottom: -8px;
+    position: relative;
+    left: 49px;
+}
+
+input{ border: white;
+    border-radius: 4px;
+}
+/* cadastro de funcionario*/
+
+
+/*Bebida*/
+.descrição{
+    position: relative;
+    left: -97px;
+}
+
+.quantidade{
+    position: relative;
+    left: -90px
+}
+
+.valorunitario{
+
+    position: relative;
+    left: -36px
+}
+
+.quantidade{
+             position: relative;
+             left:-158px
+}
+
+#number{
+        width: 106px;
+}
+/*Bebida*/
+
+
+
+/*cadastrar Cliente*/
+

@@ -5,6 +5,8 @@
         console.log($_SESSION["sessaoUser"]);
         die;
     }
+
+    $formulario = (empty($_GET["form"]) ? "" : $_GET["form"]);
 ?>
 <!DOCTYPE html>
 <html>
@@ -18,9 +20,24 @@
 
     <?php include("./intern/estrutura/menu.php") ?>
 
-    <div class="conteudo">
-        <h1>Administração</h1>
-        <hr/>
+    <div class='conteudo'>
+            <h1>Administração</h1>
+            <hr/>
+
+            <?php
+                switch ($formulario) {
+                    case "addfunc":
+                        include("./intern/formularios/cadastrarfuncionario.html");
+                        break;
+                    default:
+                        echo "
+                            <button><a href='?form=addfunc'>Adicionar funcionário</a></button>
+                        ";
+                        break;
+                }
+            ?>
+
     </div>
+
 </body>
 </html>

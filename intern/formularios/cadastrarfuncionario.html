@@ -4,46 +4,69 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sigmar&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sigmar&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+   <link rel="stylesheet" href="cadastrocliente.css">
+   <link rel="stylesheet" href="cadastrofuncionario.css">
+    <title>Cadastro de Funcionario</title>
 </head>
 <body>
-    <h1>Cadastrar Funcionario</h1>
-<hr>
-<section>
+    <h1>Napolle Pizzaria  &#127829;</h1>
+    
+    <div class="subtitulo">
+        <h2>Cadastro de Funcionário &#129506;</h2> 
+    </div>
 
-<div class="cadastro">
+    <section>
 
-<div class="nome">
-<h2>Nome:</h2>
-<input type="text">
-</div>
+        <form class="cadastro" method="get">
 
-<div class="cpf">
-<h2>CPF:</h2>
-<input type="text">
-</div>
+            <div class="nome">
+                <label>Nome:</label>
+                <input type="text" name="nome">
+            </div>
+            
+            <div class="cpf">
+                <label>CPF:</label>
+                <input type="text" name="cpf">
+            </div>
+            
+            <div class="senha">
+                <label>Senha:</label>
+                <input type="password" name="pass">
+            </div>
+            
+            <div class="confirmarsenha">
+                <label>Confirme a Senha:</label>
+                <input type="password">
+            </div>
+            
+            <div class="grupofuncional">
+                <label>Grupo Funcional:</label>
+                <input type="text" name="grupofunc">
+                
+                <button type="submit" class="btn btn-outline-warning">Salvar</button>
+            </div>
 
-<div class="senha">
-<h2>Senha:</h2>
-<input type="text">
-</div>
+        </form>
 
-<div class="confirmar senha">
-<h2>Confirme a Senha:</h2>
-<input type="text">
-</div>
-
-<div class="grupo funcional">
-<h2>Grupo Funcional:</h2>
-<input type="text">
-</div>
-
-
-
-</div>
-
-</section>
+        <button type="button" class="btn btn-danger">Voltar</button>
+        
+        <div>
+            <div>
+                <img class="imagem" src="images-removebg-preview.png" alt="">
+            </div>
+        </div>
+        
+    </section>
 
 </body>
 </html>

@@ -14,10 +14,13 @@
     text-align: left;
 }
 .divlogo h1 {
-    font-size: 7vh;
+    font-size: 6vh;
     display: inline-block;
     margin-top: 1vh;
     margin-bottom: 0vh;
+    font-family: 'Sigmar', cursive;
+    color: #9e0e0e;
+    text-shadow: 4px 1px 3px #020202;
 }
 
 .divlogo img {

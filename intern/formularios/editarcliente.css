@@ -1,0 +1,120 @@
+@charset "UTF-8";
+
+/* cadastro de funcionario*/
+body{ background-image: url(hora-da-pizza-saborosa-pizza-caseira-tradicional-receita-italiana.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+}
+
+label{
+    font-size: large;
+    display: inline-block;
+    text-shadow: 1px 1px 6px #e9ecef;
+    display: inline-block;
+}
+
+.title{ 
+    height: 43px;
+    background-color: #FAE775;
+    position: relative;
+    bottom: 0px;
+}
+
+.cadastro{
+    right: -312px;
+    position: relative;
+    background-color: #cfaf6471;
+    font-family: 'Sigmar', cursive;
+    margin: auto;
+    height: 298px;
+    border: solid;
+    border-radius: 15px;
+    width: 513px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    bottom: -238px;
+}
+
+h1{ text-align: center;
+    font-family: 'Sigmar', cursive;
+    color: #9e0e0e;
+    text-shadow: 4px 1px 3px #020202;
+}
+
+h2{ font-family: 'Sigmar', cursive;
+    color: #9e0e0e;
+    text-shadow: 4px 1px 3px #020202;
+
+}
+
+.nome{
+        position: relative;
+        left: -105px;
+    }
+
+.btn.btn-primary{
+                bottom: -15px;
+                position: relative;
+                left: 5px;
+}
+
+
+
+input{
+    border: rgba(13,110,253,.25);
+    border-radius: 4px;
+    background-color: #ffffff8f;
+}
+
+.telefone{
+        position: relative;
+        left: -80px;
+
+}
+
+.nome{
+    position: relative;
+    left: -91px;
+
+}
+
+.endereço{
+    position: relative;
+    left: -75px;
+
+}
+
+.complemento{
+            position: relative;
+            left: -6px;
+
+}
+
+.imagem{
+    position: relative;
+    vertical-align: middle;
+    right: -1305px;
+    top: -410px;
+}
+
+.btn.btn-danger{ 
+    position: relative;
+    left: 1428px;
+    bottom: -293px;
+    font-family: 'Sigmar', cursive;
+    
+
+}
+
+.subtitulo{
+    bottom: -231px;
+    position: relative;
+    text-align: center;
+    width: 350px;
+    left: 920px;
+
+
+}

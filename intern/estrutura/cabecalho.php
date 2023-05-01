@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" href="./conf/format/estiloCabecalho.css">
+    <link rel="stylesheet" href="/pizz/conf/format/estiloCabecalho.css">
+    <link href="https://fonts.googleapis.com/css2?family=Sigmar&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="cabecalho">
         <div class="divlogo">
-            <a href="home.php"> <img src="./conf/imgs/iconpizza.png" alt="Minha Figura"> </a>
+            <a href="home.php"> <img src="/pizz/conf/imgs/images-removebg-preview.png" alt="Minha Figura"> </a>
             <div style="width:2%;display: inline-block;"></div>
-            <h1>Pizzaria foda</h1>
+            <h1>Napolle Pizzaria</h1>
         </div>
         <div class="login">
             <?php  
