@@ -20,7 +20,16 @@
 
     <div class="conteudo">
         <h1>Cardápio</h1>
-        <hr/>
+        <hr/><br>
+        <div class="botoes">
+            <a href="./intern/formularios/cadastrarpizza.html"><button>Cadastrar Sabor de pizza</button></a>
+            <a href="./intern/formularios/edicaopizza.html"><button>Editar Sabor de pizza</button></a>
+
+            <br><br><hr/><br>
+
+            <a href="./intern/formularios/cadastrarbebida.html"><button>Cadastrar bebida</button></a>
+            <a href="./intern/formularios/edicaobebida.html"><button>Editar bebida</button></a>
+        </div>
     </div>
 </body>
 </html>

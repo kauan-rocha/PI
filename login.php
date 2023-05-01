@@ -20,10 +20,10 @@
             var objeto = document.getElementById("erroLogin").style.display = "none";
         }
     </script>
-<body>
+<body style="height:100vh; background-image: url('./conf/imgs/hora-da-pizza-saborosa-pizza-caseira-tradicional-receita-italiana.jpg'); background-size: 100vw 100vh;">
     <div class="loginPai">
         <div class="loginForm">
-            <a href='./'><img src="./conf/imgs/iconpizza.png" alt="Minha Figura"></a>
+            <a href='./'><img src="./conf/imgs/images-removebg-preview.png" alt="Minha Figura"></a>
 
             <div id="erroLogin" onclick='hideFailLogin()' class="erroLogin" style="<?php if($erro){echo "display: inline-block;";} ?> " ><p>Usuário não encontrado!</p></div>
 

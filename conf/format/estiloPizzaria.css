@@ -39,3 +39,24 @@ mark{
     padding-top: 2vh;
     padding-bottom: 1.5vh;
 }
+
+button{
+    font-size: 2vh;
+    min-width: 250px;
+    padding: 12px;
+    border-radius: 15px 15px 15px 15px;
+    -webkit-border-radius: 15px 15px 15px 15px;
+    -moz-border-radius: 15px 15px 15px 15px;
+    cursor:pointer;
+}
+
+button:hover{
+    background-color: #16191e;
+    color: #F5F5F5;
+}
+
+.botoes{
+    margin-left: 3vw;
+    margin-right: 3vw;
+}
+

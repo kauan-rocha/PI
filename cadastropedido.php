@@ -29,11 +29,11 @@
                 <form action="" method="POST">
                     <span style="width: 20%;">
                         <label for="fcpf">CPF:</label>
-                        <input type="search" id="fcpf" name="fcpf" style="width: 90%; border: solid 1px;">
+                        <input type="text" id="fcpf" name="fcpf" style="width: 90%; border: solid 1px;">
                     </span>
                     <span style="width: 20%;">
                         <label for="ftel">Telefone:</label>
-                        <input type="search" id="ftel" name="ftel" style="width: 90%; border: solid 1px;">
+                        <input type="text" id="ftel" name="ftel" style="width: 90%; border: solid 1px;">
                     </span>
                     <span style="width: 55%;">
                         <label for="fnome">Nome:</label>
@@ -75,27 +75,16 @@
                 <h3>Pizza</h3>
                 <hr/>
                 <form action="" method="POST">
-                    <span style="width: 12%;">
-                        <input type="radio" id="pizinteira" name="inteira" value="inteira" style="display: inline-block;">
-                        <label for="pizinteira" style="display: inline-block;">Inteira</label>
-                    </span>
-                    <span style="width: 20%;">
-                        <input type="radio" id="pizmeia" name="inteira" value="meia" style="display: inline-block;">
-                        <label for="pizmeia" style="display: inline-block;">Meio a meio</label>
-                    </span>
                     <span style="width: 30%;">
-                        <label for="fquantidadePizz" style="display: inline-block;">| &nbsp; &nbsp; &nbsp; Quantidade:</label>
+                        <label for="fquantidadePizz" style="display: inline-block;">Quantidade:</label>
                         <input type="text" id="fquantidadePizz" name="fquantidadePizz" value="1" style="width: 20%; display: inline-block;">
                     </span>
                     
                     <hr/>
 
                     <span style="width: 100%;">
-                        <label for="fsabor1" style="display: inline-block;">Sabor 1:&nbsp;</label>
+                        <label for="fsabor1" style="display: inline-block;">Sabor:&nbsp;</label>
                         <input type="text" id="fsabor1" name="fsabor1" style="width: 87%; display: inline-block;">
-                        <br>
-                        <label for="fsabor2" style="display: inline-block;">Sabor 2:</label>
-                        <input type="text" id="fsabor2" name="fsabor2" style="width: 87%; display: inline-block;">
                     </span>
 
                     <hr/>

@@ -22,22 +22,19 @@
 
     <div class='conteudo'>
             <h1>Administração</h1>
-            <hr/>
+            <hr/><br>
+            <div class="botoes">
+                <a href="./intern/formularios/cadastrarfuncionario.html"><button>Cadastrar funcionário</button></a>
+                <a href="./intern/formularios/edicaofuncionario.html"><button>Editar funcionário</button></a>
 
-            <?php
-                switch ($formulario) {
-                    case "addfunc":
-                        include("./intern/formularios/cadastrarfuncionario.html");
-                        break;
-                    default:
-                        echo "
-                            <button><a href='?form=addfunc'>Adicionar funcionário</a></button>
-                        ";
-                        break;
-                }
-            ?>
+                <br><br><hr/><br>
 
+                <a href="./intern/formularios/cadastrogrupofuncional.html"><button>Cadastrar grupo funcional</button></a>
+
+                <br><br><hr/><br>
+
+                <a href="./intern/formularios/unidadedenegocio.html"><button>Editar unidade de negócio</button></a>
+            </div>
     </div>
-
 </body>
 </html>
