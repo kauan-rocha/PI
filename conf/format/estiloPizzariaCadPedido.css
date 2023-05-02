@@ -87,15 +87,18 @@ label{
 input{
     display:block;
     border: none;
-    border-bottom: solid 1px;
 }
 
-button{
+.pedido button{
     min-width: 90px;
     padding: 7px;
     border-radius: 11px 11px 11px 11px;
     -webkit-border-radius: 11px 11px 11px 11px;
     -moz-border-radius: 11px 11px 11px 11px;
+}
+
+.pedido button:hover{
+    cursor: pointer;
 }
 
 .formPizza{
@@ -156,4 +159,50 @@ button{
     border-radius: 11px 11px 11px 11px;
     -webkit-border-radius: 11px 11px 11px 11px;
     -moz-border-radius: 11px 11px 11px 11px;
+}
+
+.fundopopup{
+    top: 0;
+    background-color:rgba(0, 0, 0, 0.5);
+    position: fixed;
+    width: 100vw;
+    min-height: 100vh;
+    z-index: 9990;
+    backdrop-filter: blur(5px);
+}
+
+.divpopup{
+    top: 25vh;
+    left: 25vw;
+    position: fixed;
+    width: 50vw;
+    height: 50vh;
+    z-index: 9999;
+}
+
+#fbutCadCli{
+    border: solid 1px;
+    margin-right: 20px;
+    float: right;
+    min-width: 90px;
+    padding: 7px;
+    border-radius: 11px 11px 11px 11px;
+    -webkit-border-radius: 11px 11px 11px 11px;
+    -moz-border-radius: 11px 11px 11px 11px;
+}
+
+#butFechar{
+    position: absolute;
+    right: 0;
+    width: 2vw;
+    height: 2vw;
+    background-color:#EC7063;
+    color: white;
+    border-radius: 11px 11px 11px 11px;
+    -webkit-border-radius: 11px 11px 11px 11px;
+    -moz-border-radius: 11px 11px 11px 11px;
+}
+
+#butFechar{
+    cursor: pointer;
 }

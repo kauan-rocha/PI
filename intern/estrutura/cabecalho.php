@@ -1,3 +1,6 @@
+<?php
+    include_once(realpath(__DIR__."/../../conf/default.php"));
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -14,7 +17,7 @@
         <div class="login">
             <?php  
                 if(!empty($_SESSION["sessaoUser"])){
-                    echo"<p>Olá, ".$_SESSION["sessaoUser"]."</p><a href='./intern/logout.php' style='color:black;'>Sair</a>";
+                    echo"<p>Olá, ".$_SESSION["sessaoUser"]."</p><a href='/pizz/intern/logout.php' style='color:black;'>Sair</a>";
                 }
             ?>
         </div>
