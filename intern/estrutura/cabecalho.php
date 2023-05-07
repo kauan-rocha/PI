@@ -12,7 +12,7 @@
         <div class="divlogo">
             <a href="home.php"> <img src="/pizz/conf/imgs/images-removebg-preview.png" alt="Minha Figura"> </a>
             <div style="width:2%;display: inline-block;"></div>
-            <h1>Napolle Pizzaria</h1>
+            <h1><?php echo $_SESSION["nomePizzaria"]; ?></h1>
         </div>
         <div class="login">
             <?php  

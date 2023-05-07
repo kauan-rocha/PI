@@ -26,16 +26,19 @@
 
 <section>
 
-    <form class="cadastro" method="get">
+    <form action="./operacaoform/cadastrarpizza.php" class="cadastro" method="get">
 
         <div class="sabor">
             <label>Sabor:</label>
             <input type="text" name="sabor">
         </div>
 
-        <div class="ingredientes">
-            <label>Ingredientes:</label>
-            <input type="text" name="ingredientes">
+        <div class="tamanho">
+            <label>Tamanho:</label>
+            <select name="tamanho">
+                <option value="Broto">Broto</option>
+                <option value="Familia">Família</option>
+            </select>
         </div>
 
         <div class="valor">

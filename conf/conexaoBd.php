@@ -1,5 +1,5 @@
 <?php
-    require_once("../define/define.php");
+    require_once(realpath(__DIR__."/../define/define.php"));
     
     class Conexao    
     {

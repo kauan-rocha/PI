@@ -69,6 +69,13 @@ input{
     background-color: #ffffff8f;
 }
 
+select{
+    border: rgba(13,110,253,.25);
+    border-radius: 4px;
+    background-color: #ffffff8f;
+    min-width: 260px;
+}
+
 .descrição{
         position: relative;
         left: -70px;
@@ -77,7 +84,7 @@ input{
 
 .quantidade{
     position: relative;
-    left: -61px;
+    left: -75px;
 
 }
 

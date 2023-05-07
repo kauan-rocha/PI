@@ -203,6 +203,7 @@ input{
     -moz-border-radius: 11px 11px 11px 11px;
 }
 
-#butFechar{
+#butFechar:hover{
     cursor: pointer;
+    background-color:#b9584d;
 }

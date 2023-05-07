@@ -57,7 +57,12 @@ h2{ font-family: 'Sigmar', cursive;
                 left: 5px;
 }
 
-
+select{
+    border: rgba(13,110,253,.25);
+    border-radius: 4px;
+    background-color: #ffffff8f;
+    min-width: 240px;
+}
 
 input{
     border: rgba(13,110,253,.25);

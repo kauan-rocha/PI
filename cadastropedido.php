@@ -195,6 +195,16 @@
                         <input type="text" id="fcadcomplemento" name="fcadcomplemento" style="width: 96%; border: solid 1px;">
                     </span>
 
+                    <span style="width: 20%;">
+                        <label for="feditcidade">Cidade:</label>
+                        <input type="text" id="feditcidade" name="feditcidade" style="width: 90%; border: solid 1px;">
+                    </span>
+
+                    <span style="width: 5%;">
+                        <label for="fedituf">UF:</label>
+                        <input type="text" id="fedituf" name="fedituf" style="width: 96%; border: solid 1px;">
+                    </span>
+
                     <span style="margin: 2%; float: right;">
                         <input id="fbutCadCli" type="submit" value="Cadastrar">
                     </span>
@@ -245,6 +255,16 @@
                     <span style="width: 50%;">
                         <label for="feditcomplemento">Complemento:</label>
                         <input type="text" id="feditcomplemento" name="feditcomplemento" style="width: 96%; border: solid 1px;">
+                    </span>
+
+                    <span style="width: 20%;">
+                        <label for="feditcidade">Cidade:</label>
+                        <input type="text" id="feditcidade" name="feditcidade" style="width: 90%; border: solid 1px;">
+                    </span>
+
+                    <span style="width: 5%;">
+                        <label for="fedituf">UF:</label>
+                        <input type="text" id="fedituf" name="fedituf" style="width: 96%; border: solid 1px;">
                     </span>
 
                     <span style="margin: 2%; float: right;">

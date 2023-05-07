@@ -61,12 +61,17 @@ h2{ font-family: 'Sigmar', cursive;
                 left: 5px;
 }
 
-
-
 input{
     border: rgba(13,110,253,.25);
     border-radius: 4px;
     background-color: #ffffff8f;
+}
+
+select{
+    border: rgba(13,110,253,.25);
+    border-radius: 4px;
+    background-color: #ffffff8f;
+    min-width: 250px;
 }
 
 .sabor{
@@ -75,10 +80,14 @@ input{
 
 }
 
-.ingredientes{
+.tamanho{
     position: relative;
-    left: -53px;
+    left: -65px;
+}
 
+.codigo{
+    position: relative;
+    left: -75px;
 }
 
 .valor{

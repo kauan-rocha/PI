@@ -75,9 +75,16 @@ input{
 
 }
 
-.ingredientes{
+select{
+    border: rgba(13,110,253,.25);
+    border-radius: 4px;
+    background-color: #ffffff8f;
+    min-width: 250px;
+}
+
+.tamanho{
     position: relative;
-    left: -48px;
+    left: -65px;
 
 }
 

@@ -28,21 +28,28 @@
 
 <section>
 
-   <form class="cadastro" method="get">
+   <form action="./operacaoform/cadastrarbebida.php" class="cadastro" method="GET">
 
         <div class="descrição">
             <label>Descrição:</label>
-            <input type="text" name="descricao">
+            <input type="text" name="descricao" value="">
         </div>
             
         <div class="quantidade">
-            <label>Quantidade:</label>
-            <input id="number" type="number" name="qtd">
+            <label>Marca:</label>
+            <select id="number" name="marca">
+                <option value="">--</option>
+                <option value="1">Guaraná Antarctica</option>
+                <option value="2">Coca-Cola</option>
+                <option value="3">Brahma</option>
+                <option value="4">Skol</option>
+                <option value="5">Antarctica Original</option>
+            </select>
         </div>
             
         <div class="valorunitario">
             <label>Valor Unitário:</label>
-            <input type="text" name="valor">
+            <input type="text" name="valor" value="">
             <button type="submit" class="btn btn-outline-warning">Salvar</button>
         </div>
     </form>

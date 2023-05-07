@@ -71,13 +71,13 @@ input{
 
 .CNPJ{
         position: relative;
-        left: -90px;
+        left: -100px;
 
 }
 
 .nome{
     position: relative;
-    left: -91px;
+    left: 0px;
 
 }
 
