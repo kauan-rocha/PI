@@ -1,5 +1,6 @@
 const cepCad = document.querySelector("#fcadcep");
 const cepEdit = document.querySelector("#feditcep");
+const cpfCli = document.querySelector("#fcpf");
 
 document.addEventListener("DOMContentLoaded", function() {
     setTimeout(function(){
@@ -32,6 +33,28 @@ cepEdit.addEventListener("blur", (e) =>{
     let pesquisa = cepEdit.value.replace("-","");
     consultaCep(pesquisa, "#feditendereco", "#feditbairro", "#feditcidade", "#fedituf")    
 })
+
+cpfCli.addEventListener("blur", (e) =>{
+    let pesquisa = cpfCli.value;
+    buscaCliente(pesquisa);
+})
+
+async function buscaCliente(pesquisa){
+    const data = await  fetch('/pizz/intern/formularios/operacaoform/buscarcliente.php?cpf='+pesquisa);
+    const retorno = await data.json();
+
+    console.log(retorno);
+
+    if(retorno['erro']==false){
+        document.querySelector('#ftel').value = retorno['data'][0]['tel'];
+        document.querySelector('#fnome').value = retorno['data'][0]['nome'];
+        document.querySelector('#fcep').value = retorno['data'][0]['cep'];
+        document.querySelector('#fnumero').value = retorno['data'][0]['num'];
+        document.querySelector('#fcomplemento').value = retorno['data'][0]['compl'];
+    }else{
+        document.querySelector('#fnome').value = retorno['data'];
+    }
+}
 
 function consultaCep(valor, end, brr, cid, uf){
     const options = {

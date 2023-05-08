@@ -30,7 +30,7 @@
             <form action="./intern/validaLogin.php" method="post">
                 <div class="divform">
                     <label for="fname">CPF:</label><br>
-                    <input type="text" name="cpf" placeholder="000.000.000-00"><br>
+                    <input type="text" maxlength="11" name="cpf" placeholder="Apenas números"><br>
                 </div>
                 <div>  
                     <label for="lname">Senha:</label><br>
