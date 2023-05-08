@@ -8,6 +8,7 @@
     }
     else{
         header("location: ../unidadedenegocio.html");
+        die;
     }
     
     try{
@@ -34,5 +35,6 @@
     }
 
     header("location: ../unidadedenegocio.html");
+    die;
 
 ?>

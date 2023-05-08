@@ -10,6 +10,7 @@
     }
     else{
         header("location: ../edicaopizza.html");
+        die;
     }
     
     try{
@@ -30,5 +31,6 @@
     }
 
     header("location: ../edicaopizza.html");
+    die;
 
 ?>

@@ -9,6 +9,7 @@
     }
     else{
         header("location: ../cadastrarbebida.html");
+        die;
     }
     
     try{
@@ -33,5 +34,6 @@
     }
 
     header("location: ../cadastrarbebida.html");
+    die;
 
 ?>

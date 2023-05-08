@@ -10,6 +10,7 @@
     }
     else{
         header("location: ../cadastrarbebida.html");
+        die;
     }
     
     try{
@@ -34,5 +35,5 @@
     }
 
     header("location: ../edicaobebida.html");
-
+    die;
 ?>

@@ -10,6 +10,7 @@
     }
     else{
         header("location: ../cadastrarfuncionario.html");
+        die;
     }
     
     try{
@@ -45,5 +46,6 @@
     }
 
     header("location: ../cadastrarfuncionario.html");
+    die;
 
 ?>

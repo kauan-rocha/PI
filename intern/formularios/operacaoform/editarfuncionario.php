@@ -10,6 +10,7 @@
     }
     else{
         header("location: ../editaofuncionario.html");
+        die;
     }
     
     try{
@@ -52,5 +53,5 @@
     }
 
     header("location: ../editaofuncionario.html");
-
+    die;
 ?>

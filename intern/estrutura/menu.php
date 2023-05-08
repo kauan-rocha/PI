@@ -16,6 +16,7 @@
                     $menuCardapio = array("GER","LOG");
 
                     //If para validar se o perfil do usuário logado libera o menu.
+                    echo "<li><a href='/pizz/home.php'><i class='fa-solid fa-house'></i> Home</a></li>";
                     echo  in_array($_SESSION["sessaoPerfil"], $menuCadPedido) ? "<li><a href='/pizz/cadastropedido.php'><i class='fa-solid fa-pizza-slice'></i> Cadastro de Pedidos</a></li>" : "";
                     echo  in_array($_SESSION["sessaoPerfil"], $menuPedidos) ? "<li><a href='/pizz/pedidos.php'><i class='fa-solid fa-table'></i> Pedidos</a></li>" : "";
                     echo  in_array($_SESSION["sessaoPerfil"], $menuAdmin) ? "<li><a href='/pizz/administracao.php'><i class='fa-solid fa-gears'></i></i> Administração</a></li>" : "";

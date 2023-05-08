@@ -9,6 +9,7 @@
     }
     else{
         header("location: ../cadastrarpizza.html");
+        die;
     }
     
     try{
@@ -29,5 +30,6 @@
     }
 
     header("location: ../cadastrarpizza.html");
+    die;
 
 ?>

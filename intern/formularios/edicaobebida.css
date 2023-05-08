@@ -61,7 +61,10 @@ h2{ font-family: 'Sigmar', cursive;
                 left: 5px;
 }
 
-
+.codigo{
+    position: relative;
+    left: -82px;
+}
 
 input{
     border: rgba(13,110,253,.25);
@@ -79,12 +82,11 @@ select{
 .descrição{
         position: relative;
         left: -70px;
-
 }
 
 .quantidade{
     position: relative;
-    left: -75px;
+    left: -78px;
 
 }
 

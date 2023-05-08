@@ -12,7 +12,6 @@
         <title>Pedido</title>
         <link rel="stylesheet" href="./conf/format/estiloPizzariaCadPedido.css">
         <link rel="shortcut icon" type="image/x-icon" href="./conf/imgs/iconpizza.ico">
-        <script src="js/cadastropedido.js"></script>
     </head>
 <body>
     <?php include("./intern/estrutura/cabecalho.php") ?>
@@ -29,34 +28,39 @@
                 <h3>Cliente</h3>
                 <hr/>
                 <form action="" method="POST">
-                    <span style="width: 20%;">
+                    <span style="width: 15%;">
                         <label for="fcpf">CPF:</label>
-                        <input type="text" id="fcpf" name="fcpf" style="width: 90%; border: solid 1px;">
+                        <input type="text" maxlength="11" id="fcpf" name="fcpf" style="width: 90%; border: solid 1px;">
                     </span>
                     <span style="width: 20%;">
                         <label for="ftel">Telefone:</label>
-                        <input type="text" id="ftel" name="ftel" style="width: 90%; border: solid 1px;">
+                        <input type="text" maxlength="11" id="ftel" name="ftel" style="width: 90%; border: solid 1px;">
                     </span>
-                    <span style="width: 55%;">
+                    <span style="width: 61%;">
                         <label for="fnome">Nome:</label>
                         <input type="text" id="fnome" name="fnome" style="width: 100%;" readonly>
                     </span>
 
                     <br>
 
-                    <span style="width: 20%;">
+                    <span style="width: 15%;">
                         <label for="fcep">CEP:</label>
                         <input type="text" id="fcep" name="fcep" style="width: 90%;" readonly>
                     </span>
 
-                    <span style="width: 60%;">
+                    <span style="width: 40%;">
                         <label for="fendereco">Endereço:</label>
                         <input type="text" id="fendereco" name="fendereco" style="width: 96%;" readonly>
                     </span>
 
-                    <span style="width: 15%;">
+                    <span style="width: 12%;">
                         <label for="fnumero">Número:</label>
-                        <input type="text" id="fnumero" name="fnumero" style="width: 100%;" readonly>
+                        <input type="text" id="fnumero" name="fnumero" style="width: 87%;" readonly>
+                    </span>
+
+                    <span style="width: 30%;">
+                        <label for="fbairro">Bairro:</label>
+                        <input type="text" id="fbairro" name="fbairro" style="width: 96%;" readonly>
                     </span>
 
                     <br>
@@ -157,14 +161,14 @@
             <div class="formCliente">
                 <h3>Cadastrar cliente</h3>
                 <hr/>
-                <form action="" method="POST">
+                <form action="/pizz/intern/formularios/operacaoform/cadastrarcliente.php" method="GET">
                     <span style="width: 20%;">
                         <label for="fcadcpf">CPF:</label>
-                        <input type="text" id="fcadcpf" name="fcadcpf" style="width: 90%; border: solid 1px;">
+                        <input type="text" maxlength="11" id="fcadcpf" name="fcadcpf" style="width: 90%; border: solid 1px;">
                     </span>
                     <span style="width: 20%;">
                         <label for="fcadtel">Telefone:</label>
-                        <input type="text" id="fcadtel" name="fcadtel" style="width: 90%; border: solid 1px;">
+                        <input type="text" maxlength="11" id="fcadtel" name="fcadtel" style="width: 90%; border: solid 1px;">
                     </span>
                     <span style="width: 55%;">
                         <label for="fcadnome">Nome:</label>
@@ -173,19 +177,24 @@
 
                     <br>
 
-                    <span style="width: 20%;">
+                    <span style="width: 15%;">
                         <label for="fcadcep">CEP:</label>
                         <input type="text" id="fcadcep" name="fcadcep" style="width: 90%; border: solid 1px;">
                     </span>
 
-                    <span style="width: 60%;">
+                    <span style="width: 40%;">
                         <label for="fcadendereco">Endereço:</label>
                         <input type="text" id="fcadendereco" name="fcadendereco" style="width: 96%; border: solid 1px;">
                     </span>
 
-                    <span style="width: 15%;">
+                    <span style="width: 12%;">
                         <label for="fcadnumero">Número:</label>
-                        <input type="text" id="fcadnumero" name="fcadnumero" style="width: 100%; border: solid 1px;">
+                        <input type="text" id="fcadnumero" name="fcadnumero" style="width: 87%; border: solid 1px;">
+                    </span>
+
+                    <span style="width: 30%;">
+                        <label for="fcadbairro">Bairro:</label>
+                        <input type="text" id="fcadbairro" name="fcadbairro" style="width: 92%; border: solid 1px;">
                     </span>
 
                     <br>
@@ -196,13 +205,13 @@
                     </span>
 
                     <span style="width: 20%;">
-                        <label for="feditcidade">Cidade:</label>
-                        <input type="text" id="feditcidade" name="feditcidade" style="width: 90%; border: solid 1px;">
+                        <label for="fcadcidade">Cidade:</label>
+                        <input type="text" id="fcadcidade" name="fcadcidade" style="width: 90%; border: solid 1px;">
                     </span>
 
                     <span style="width: 5%;">
-                        <label for="fedituf">UF:</label>
-                        <input type="text" id="fedituf" name="fedituf" style="width: 96%; border: solid 1px;">
+                        <label for="fcaduf">UF:</label>
+                        <input type="text" id="fcaduf" name="fcaduf" style="width: 96%; border: solid 1px;">
                     </span>
 
                     <span style="margin: 2%; float: right;">
@@ -214,66 +223,17 @@
     </div>
 
     <div class="fundopopup" id="editacliente" style="display: none;">
-        <div class="divpopup">
-        <button id="butFechar" onclick="FecharEditaCliente()" >X</button>
-            <div class="formCliente">
-                <h3>Editar cliente</h3>
-                <hr/>
-                <form action="" method="POST">
-                    <span style="width: 20%;">
-                        <label for="feditcpf">CPF:</label>
-                        <input type="text" id="feditcpf" name="feditcpf" style="width: 90%; border: solid 1px;">
-                    </span>
-                    <span style="width: 20%;">
-                        <label for="fedittel">Telefone:</label>
-                        <input type="text" id="fedittel" name="fedittel" style="width: 90%; border: solid 1px;">
-                    </span>
-                    <span style="width: 55%;">
-                        <label for="feditnome">Nome:</label>
-                        <input type="text" id="feditnome" name="feditnome" style="width: 100%; border: solid 1px;">
-                    </span>
-
-                    <br>
-
-                    <span style="width: 20%;">
-                        <label for="feditcep">CEP:</label>
-                        <input type="text" id="feditcep" name="feditcep" style="width: 90%; border: solid 1px;">
-                    </span>
-
-                    <span style="width: 60%;">
-                        <label for="feditendereco">Endereço:</label>
-                        <input type="text" id="feditendereco" name="feditendereco" style="width: 96%; border: solid 1px;">
-                    </span>
-
-                    <span style="width: 15%;">
-                        <label for="feditnumero">Número:</label>
-                        <input type="text" id="feditnumero" name="feditnumero" style="width: 100%; border: solid 1px;">
-                    </span>
-
-                    <br>
-
-                    <span style="width: 50%;">
-                        <label for="feditcomplemento">Complemento:</label>
-                        <input type="text" id="feditcomplemento" name="feditcomplemento" style="width: 96%; border: solid 1px;">
-                    </span>
-
-                    <span style="width: 20%;">
-                        <label for="feditcidade">Cidade:</label>
-                        <input type="text" id="feditcidade" name="feditcidade" style="width: 90%; border: solid 1px;">
-                    </span>
-
-                    <span style="width: 5%;">
-                        <label for="fedituf">UF:</label>
-                        <input type="text" id="fedituf" name="fedituf" style="width: 96%; border: solid 1px;">
-                    </span>
-
-                    <span style="margin: 2%; float: right;">
-                        <input id="fbutCadCli" type="submit" value="Salvar">
-                    </span>
-                </form>
-            </div>
-        </div>
+        <?php include("./intern/formularios/editarcliente.php") ?>
     </div>
 
+    <?php
+        if(!empty($_GET["resp"])){
+            if($_GET["resp"] == "cadsuss")
+                echo "<div id='msg-box' style='background-color: darkseagreen;'><p>Cadastro realizado com sucesso!!</p></div>";
+            elseif($_GET["resp"] == "erroinfo")
+                echo "<div id='msg-box' style='background-color: #EC7063;'><p>Erro no cadastro! Valide os campos do formulário.</p></div>";
+        }
+    ?>
+    <script src="js/cadastropedido.js"></script>
 </body>
 </html>

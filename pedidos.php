@@ -20,7 +20,13 @@
 
     <div class="conteudo">
         <h1>Pedidos</h1>
+
+        <hr/>
+
+        <?php include("./intern/controlepedido.php") ?>
+
         <hr/>
     </div>
+    <script src="js/controlepedido.js"></script>
 </body>
 </html>
