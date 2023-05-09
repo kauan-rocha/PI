@@ -20,7 +20,7 @@
             var objeto = document.getElementById("erroLogin").style.display = "none";
         }
     </script>
-<body style="height:100vh; background-image: url('./conf/imgs/hora-da-pizza-saborosa-pizza-caseira-tradicional-receita-italiana.jpg'); background-size: 100vw 100vh;">
+<body style=" z-index: 1; height:100vh; background-image: url('./conf/imgs/hora-da-pizza-saborosa-pizza-caseira-tradicional-receita-italiana.jpg'); background-size: 100vw 100vh;">
     <div class="loginPai">
         <div class="loginForm">
             <a href='./'><img src="./conf/imgs/images-removebg-preview.png" alt="Minha Figura"></a>

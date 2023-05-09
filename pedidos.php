@@ -27,6 +27,16 @@
 
         <hr/>
     </div>
+
+    <?php
+        if(!empty($_GET["resp"])){
+            if($_GET["resp"] == "editsuss")
+                echo "<div id='msg-box' style='background-color: darkseagreen;'><p>Pedido atualizado com sucesso!!</p></div>";
+            elseif($_GET["resp"] == "erroinfo")
+                echo "<div id='msg-box' style='background-color: #EC7063;'><p>Erro na atualização! Tente novamente mais tarde.</p></div>";
+        }
+    ?>
+
     <script src="js/controlepedido.js"></script>
 </body>
 </html>

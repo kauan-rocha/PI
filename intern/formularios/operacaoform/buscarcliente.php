@@ -11,7 +11,16 @@
     
             $queryString = "
                 SELECT TOP 1
-                cli.CPF_CLI as cpf, cli.TEL_CLI as tel, cli.NM_CLI as nome, ende.CEP_END as cep, ende.NM_END as num, ende.CMP_END as compl
+                    cli.CPF_CLI as cpf,
+                    cli.TEL_CLI as tel,
+                    cli.NM_CLI as nome,
+                    ende.CEP_END as cep,
+                    ende.LGD_END as ender,
+                    ende.NM_END as num,
+                    ende.BRO_END as bro,
+                    ende.CMP_END as compl,
+                    ende.CID_END as cid,
+                    ende.UF_END as uf
                 FROM [TB_CLI] as cli
                 INNER JOIN [TB_END] as ende on ende.[CPF_CLI] = cli.[CPF_CLI]
                 WHERE cli.CPF_CLI = '".$cpf."';

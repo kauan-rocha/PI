@@ -14,12 +14,19 @@ body {
 }
 
 .loginForm {
+    -webkit-box-shadow: 0px 3px 8px 0px rgba(0,0,0,0.13);
+    -moz-box-shadow: 0px 3px 8px 0px rgba(0,0,0,0.13);
+    box-shadow: 0px 3px 8px 0px rgba(0,0,0,0.13);
+    border-radius: 11px 11px 11px 11px;
+    -webkit-border-radius: 11px 11px 11px 11px;
+    -moz-border-radius: 11px 11px 11px 11px;
     width: 45%;
     background: #F5F5F5;
     border-top: #DCDCDC solid 5px;
     border-left: #DCDCDC solid 2px;
     border-right: #DCDCDC solid 2px;
     border-bottom: #DCDCDC solid 2px;
+    z-index: 9990;
 }
 
 .loginForm img{

@@ -1,3 +1,9 @@
+document.addEventListener("DOMContentLoaded", function() {
+    setTimeout(function(){
+        document.querySelector("#msg-box").classList.toggle("fadeout");
+    }, 5000)
+});
+
 function cancelarPedido(cod_ped){
     var txt;
     if (confirm("Tem certeza que desenha cancelar o pedido "+cod_ped+"?")) {

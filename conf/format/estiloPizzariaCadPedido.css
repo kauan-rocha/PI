@@ -1,5 +1,18 @@
 @import "estiloPadrao.css";
 
+::-webkit-input-placeholder {
+    font-style: italic;
+ }
+ :-moz-placeholder {
+    font-style: italic;  
+ }
+ ::-moz-placeholder {
+    font-style: italic;  
+ }
+ :-ms-input-placeholder {  
+    font-style: italic; 
+ }
+
 body{
     margin: 0px;
     padding: 0;
@@ -28,7 +41,7 @@ mark{
     padding-right: 1vw;
     float: left;
     margin-left: 2vw;
-    height: 82vh;
+    height: 80vh;
     width: 28vw;
     background: #F5F5F5;
 }
@@ -37,14 +50,15 @@ mark{
     padding-left: 1vw;
     padding-right: 1vw;
     float: right;
-    height: 82vh;
+    height: 80vh;
     width: 58vw;
     background: #F5F5F5;
+    justify-content: center;
 }
 
 .venda{
     float:right;
-    height: 7vh;
+    height: 9vh;
     width: 95vw;
     background:#F5F5F5;
     -webkit-box-shadow: 0px -3px 8px 0px rgba(0,0,0,0.13);
@@ -69,7 +83,7 @@ mark{
 
 form{
     width: 100%;
-    font-size: 2vmin;
+    font-size: 1.5vmin;
 }
 
 h3{
@@ -86,12 +100,13 @@ label{
 }
 input{
     display:block;
-    border: none;
+    
 }
 
 .pedido button{
     min-width: 90px;
     padding: 7px;
+    border: 1px solid black;
     border-radius: 11px 11px 11px 11px;
     -webkit-border-radius: 11px 11px 11px 11px;
     -moz-border-radius: 11px 11px 11px 11px;
@@ -99,6 +114,12 @@ input{
 
 .pedido button:hover{
     cursor: pointer;
+    background-color: #dddddd;
+}
+
+input[type=submit]:hover{
+    cursor: pointer;
+    background-color: #dddddd;
 }
 
 .formPizza{

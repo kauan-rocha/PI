@@ -1,11 +1,16 @@
+//======================= Funções da seção CLIENTE
+
 const cepCad = document.querySelector("#fcadcep");
 const cepEdit = document.querySelector("#feditcep");
 const cpfCli = document.querySelector("#fcpf");
 
+const cpfEditCli = document.querySelector("#feditcpf");
+
 document.addEventListener("DOMContentLoaded", function() {
     setTimeout(function(){
         document.querySelector("#msg-box").classList.toggle("fadeout");
-    }, 5000)
+    }, 4000)
+    
 });
 
 function FecharCadastraCliente(){
@@ -26,37 +31,74 @@ function AbrirEditaCliente(){
 
 cepCad.addEventListener("blur", (e) =>{
     let pesquisa = cepCad.value.replace("-","");
-    consultaCep(pesquisa, "#fcadendereco", "#fcadbairro", "#fcadcidade", "#fcaduf") 
-})
+    var dict = { 
+        "#fcadendereco": "logradouro",
+        "#fcadbairro": "bairro",
+        "#fcadcidade": "localidade",
+        "#fcaduf": "uf"
+    };
+    consultaCep(pesquisa, dict) 
+});
 
 cepEdit.addEventListener("blur", (e) =>{
     let pesquisa = cepEdit.value.replace("-","");
-    consultaCep(pesquisa, "#feditendereco", "#feditbairro", "#feditcidade", "#fedituf")    
-})
+    var dict = { 
+        "#feditendereco": "logradouro",
+        "#feditbairro": "bairro",
+        "#feditcidade": "localidade",
+        "#fedituf": "uf"
+    };
+    consultaCep(pesquisa, dict)    
+});
 
 cpfCli.addEventListener("blur", (e) =>{
     let pesquisa = cpfCli.value;
-    buscaCliente(pesquisa);
-})
+    var dict = { 
+        "#ftel": "tel",
+        "#fnome": "nome",
+        "#fcep": "cep",
+        "#fendereco": "ender",
+        "#fnumero": "num",
+        "#fbairro": "bro",
+        "#fcomplemento": "compl"
+    };
+    buscaCliente(dict, pesquisa);
+});
 
-async function buscaCliente(pesquisa){
+cpfEditCli.addEventListener("blur", (e) =>{
+    let pesquisa = cpfEditCli.value;
+    var dict = { 
+        "#fedittel": "tel",
+        "#feditnome": "nome",
+        "#feditcep": "cep",
+        "#feditendereco": "ender",
+        "#feditnumero": "num",
+        "#feditbairro": "bro",
+        "#feditcomplemento": "compl",
+        "#feditcidade": "cid",
+        "#fedituf": "uf"
+    };
+    buscaCliente(dict,pesquisa);
+    for (var key in dict)
+        document.querySelector(key).disabled = false;
+});
+
+async function buscaCliente(dict,pesquisa){
     const data = await  fetch('/pizz/intern/formularios/operacaoform/buscarcliente.php?cpf='+pesquisa);
     const retorno = await data.json();
 
-    console.log(retorno);
-
     if(retorno['erro']==false){
-        document.querySelector('#ftel').value = retorno['data'][0]['tel'];
-        document.querySelector('#fnome').value = retorno['data'][0]['nome'];
-        document.querySelector('#fcep').value = retorno['data'][0]['cep'];
-        document.querySelector('#fnumero').value = retorno['data'][0]['num'];
-        document.querySelector('#fcomplemento').value = retorno['data'][0]['compl'];
+        for (var key in dict){
+            document.querySelector(key).value = retorno['data'][0][dict[key]];  
+        }
     }else{
-        document.querySelector('#fnome').value = retorno['data'];
+        for (var key in dict)
+            document.querySelector(key).value = "";
+        document.querySelector(Object.keys(dict)[1]).value = retorno['data'];
     }
 }
 
-function consultaCep(valor, end, brr, cid, uf){
+function consultaCep(valor, dict){
     const options = {
         method: 'GET',
         mode: 'cors',
@@ -66,21 +108,52 @@ function consultaCep(valor, end, brr, cid, uf){
     return fetch(`https://viacep.com.br/ws/${valor}/json/`, options)
     .then(response => { response.json()
         .then( data => {
-            document.querySelector(end).value = data["logradouro"];
-            document.querySelector(brr).value = data["bairro"];
-            document.querySelector(cid).value = data["localidade"];
-            document.querySelector(uf).value = data["uf"];
-            document.querySelector(end).style.borderColor = "black";
-            document.querySelector(brr).style.borderColor = "black";
-            document.querySelector(cid).style.borderColor = "black";
-            document.querySelector(uf).style.borderColor = "black";
+            for (var key in dict){
+                document.querySelector(key).value = data[dict[key]];
+                document.querySelector(key).style.borderColor = "black";
+            } 
         })
     })
     .catch(e => {
-        console.log("Erro: " + e.message);
-        document.querySelector(end).style.borderColor = "red";
-        document.querySelector(brr).style.borderColor = "red";
-        document.querySelector(cid).style.borderColor = "red";
-        document.querySelector(uf).style.borderColor = "red";
+        for (var key in dict){
+            document.querySelector(key).value = "";
+            document.querySelector(key).style.borderColor = "red";
+        } 
     });
 }
+
+//======================= Funções da seção PIZZA
+
+$(function(){
+    $('#fsabor').autocomplete({
+        source: '/pizz/intern/formularios/operacaoform/pesquisasaborpizza.php'
+    });
+});
+
+$(function(){
+    $('#fbebida').autocomplete({
+        source: '/pizz/intern/formularios/operacaoform/pesquisabebida.php'
+    });
+});
+
+async function buscaPizza(){
+    let qtd = document.querySelector('#fquantidadePizz').value;
+    let sabor = document.querySelector('#fsabor').value;
+    let tamanho = document.querySelector('input[name="ftamanhopizza"]:checked').value;
+
+    var dict = {"#fcodpizz": "cod_piz","#fvalorPizza": "vlr_piz"};
+
+    const data = await  fetch('/pizz/intern/formularios/operacaoform/buscarpizza.php?sabor='+sabor+'&tamanho='+tamanho);
+    const retorno = await data.json();
+
+    if(retorno['erro']==false){
+        document.querySelector('#fcodpizz').value = retorno['data'][0]['cod_piz'];  
+        document.querySelector('#fvalorPizza').value = "R$ "+(parseFloat(retorno['data'][0]['vlr_piz']) * parseFloat(qtd)).toFixed(2).toString();  
+
+    }else{
+        for (var key in dict)
+            document.querySelector(key).value = "R$ 0.0";
+    }
+}
+
+
