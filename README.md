@@ -21,8 +21,8 @@ https://www.youtube.com/watch?v=i_ypCik4VX0&ab_channel=ProgramadoresDepr%C3%AA
 
 2) Crie uma pasta 'pizz' dentro do diretório 'htdocs' do seu xampp, o caminho deve ser algo parecido com isso "C:\xampp\htdocs\pizz".
 
-3) Instale os drivers do SQL para o PHP.
-- Siga as instruções do link abaixo a partir da linha 'Agora vamos efetuar o download do driver do SQLServer para PHP no site da Microsoft.'<br>
+3) Instale os drivers do SQL para o PHP.<br>
+Siga as instruções do link abaixo a partir da linha 'Agora vamos efetuar o download do driver do SQLServer para PHP no site da Microsoft.'<br>
 https://www.devmedia.com.br/conectando-no-sql-server-utilizando-pdo-em-php/38936
 
 4) Extraia esse projeto do git.
@@ -30,14 +30,7 @@ https://www.devmedia.com.br/conectando-no-sql-server-utilizando-pdo-em-php/38936
 
 5) Descompacte o arquivo baixado no diretório 'pizz' criado na etapa 2.
 
-6) Crie um banco de dados no SQL e execute o arquivo dump.sql
-Obs.: O arquivo está localizado no diretório /sql/ do projeto.
+6) Crie um banco de dados no SQL e execute o arquivo dump.sql<br>
+7) Obs.: O arquivo está localizado no diretório /sql/ do projeto.
 
-7) Edite o arquivo 
-
-
-
-
-
-
-
+7) Edite o arquivo /define/define.php com as informações do seu banco de dados.
