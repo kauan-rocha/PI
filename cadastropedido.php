@@ -21,7 +21,7 @@
 
     <div class="pedido">
         <div class="resumo">
-            
+            <?php include("./intern/resumopedido.php") ?>
         </div>
 
         <div class="infos">
