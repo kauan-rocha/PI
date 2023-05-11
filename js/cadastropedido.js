@@ -9,8 +9,7 @@ const cpfEditCli = document.querySelector("#feditcpf");
 document.addEventListener("DOMContentLoaded", function() {
     setTimeout(function(){
         document.querySelector("#msg-box").classList.toggle("fadeout");
-    }, 4000)
-    
+    }, 4000);
 });
 
 function FecharCadastraCliente(){
@@ -156,4 +155,50 @@ async function buscaPizza(){
     }
 }
 
+function addPizza(){
+    var cod = document.querySelector('#fcodpizz').value;
+    var qtd = document.querySelector('#fquantidadePizz').value;
+    var tmn = document.querySelector('input[name="ftamanhopizza"]:checked').value;
+    var sabor = document.querySelector('#fsabor').value;
+    var obs = Array.from(document.querySelectorAll("input[name='fadicional']:checked")).map((elem) => elem.value);
+    var valor = document.querySelector('#fvalorPizza').value.split(' ')[1];
+    var tipo = "P";
 
+    document.querySelector('#fcodpizz').value = "0";
+    document.querySelector('#fquantidadePizz').value = "1";
+    document.querySelector('input[id="ffamilia"]').checked = true;
+    document.querySelector('#fsabor').value = "";
+    for (const checkbox of document.querySelectorAll("input[name='fadicional']")) {    
+        checkbox.checked = false;
+    }
+    document.querySelector('#fvalorPizza').value = "R$ 0.00";
+
+    addItem(cod, tipo, qtd, sabor, tmn, obs, valor);
+}
+
+function addBebida(){
+    var cod = document.querySelector('#fcodbebida').value;
+    var qtd = document.querySelector('#fquantidadeBebida').value;
+    var tmn = "";
+    var bebida = document.querySelector('#fbebida').value;
+    var obs = "";
+    var valor = document.querySelector('#fvalorBebida').value.split(' ')[1];
+    var tipo = "B";
+
+    addItem(cod, tipo, qtd, bebida, tmn, obs, valor);
+}
+
+var controleItem = 0;
+function addItem(cod, tipo, qtd, item, tmn, obs, valor){
+    var adicional = "";
+    for (const checkbox of obs) {    
+        adicional = adicional + "+"+checkbox+" ";
+    }
+    console.log(adicional);
+    document.getElementById('tableItens').insertAdjacentHTML('beforeend','<tr id="item['+controleItem+']"><td id="cod-item['+controleItem+']" style="display: none;">'+cod+'</td><td id="tipo-item['+controleItem+']" style="display: none;">'+tipo+'</td><td id="qtd-item['+controleItem+']" style="text-align: center;">'+qtd+'</td><td>'+item+'</td><td id="tmn-item['+controleItem+']">'+tmn+'</td><td id="obs-item['+controleItem+']">'+adicional+'</td><td style="text-align: right; padding-right: 0.5vw;">'+valor+'</td><td><button type="button" class="bCancelarItem" onclick="cancelarItem('+controleItem+')">x</button></td></tr>');
+    controleItem=controleItem+1;
+}
+
+function cancelarItem(id){
+    document.getElementById('item['+id+']').remove();
+}

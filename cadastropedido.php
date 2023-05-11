@@ -106,15 +106,15 @@
                     <hr/>
 
                     <span style="width: 100%;">
-                        <label for="fcomplementoPizza" style="display: inline-block;">Complementos:</label>
+                        <label for="fcomplementoPizza" style="display: inline-block;">Adicionais:</label>
                         <div id="fcomplementoPizza">
-                            <input type="checkbox" id="complCebola" name="complCebola" value="Cebola" style="display: inline-block;">
+                            <input type="checkbox" id="complCebola" name="fadicional" value="Cebola" style="display: inline-block;">
                             <label for="complCebola" style="display: inline-block;">Cebola</label>
 
-                            <input type="checkbox" id="complTomate" name="complTomate" value="Tomate" style="display: inline-block;">
+                            <input type="checkbox" id="complTomate" name="fadicional" value="Tomate" style="display: inline-block;">
                             <label for="complTomate" style="display: inline-block;">Tomate</label>
 
-                            <input type="checkbox" id="complPalmito" name="complPalmito" value="Palmito" style="display: inline-block;">
+                            <input type="checkbox" id="complPalmito" name="fadicional" value="Palmito" style="display: inline-block;">
                             <label for="complPalmito" style="display: inline-block;">Palmito</label>
                         </div>
                     </span>
@@ -126,7 +126,7 @@
                         <input type="text" id="fvalorPizza" name="fvalorPizza" value="R$ 0,00" style="width: 30%; display: inline-block;" disabled>
                     </span>
                     <span style="padding-top: 1%; float: right;">
-                        <button type="button" id="fbutAddPizz" onclick="AbrirCadastraCliente()">Adicionar +</button>
+                        <button type="button" id="fbutAddPizz" onclick="addPizza()">Adicionar +</button>
                     </span>
                     <br>
                 </form>
@@ -136,6 +136,7 @@
                 <h3>Bebida</h3>
                 <hr/>
                 <form action="" method="POST">
+                <input name="fcodbebida" id="fcodbebida" type="number" style="display:none;" value="">
                     <span style="width: 30%;">
                         <label for="fquantidadeBebida" style="display: inline-block;">Quantidade:</label>
                         <input type="text" id="fquantidadeBebida" name="fquantidadeBebida" value="1" style="width: 20%; display: inline-block; border: solid 1px;">
@@ -152,7 +153,7 @@
 
                     <br>
                     <span style="padding-top: 1%; float: right;">
-                        <input id="fbutAddBebida" type="submit" value="Adicionar +">
+                        <input id="fbutAddBebida" type="button" onclick="addBebida()" value="Adicionar +">
                     </span>
                     <br> <br>
                 </form>
@@ -161,6 +162,18 @@
         </div>
 
         <div class="venda">
+            <div class="pagamento">
+                <h2>Total: R$120,00</h2>
+                <section>
+                    <label for="fformapagto">Forma de pagamento</lable>
+                    <select name="fformapagto" id="fformapagto">
+                        <option value="C">Credito</option>
+                        <option value="D">Debito</option>
+                        <option value="E">Dinheiro</option>
+                    </select>
+                </section>
+                <button class="enviarPedido" type="button" onclick="enviarPedido()">Enviar Pedido</button>
+            </div>
             
         </div>
     </div>

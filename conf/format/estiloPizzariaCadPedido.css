@@ -40,9 +40,9 @@ mark{
     padding-left: 1vw;
     padding-right: 1vw;
     float: left;
-    margin-left: 2vw;
+    margin-left: 1vw;
     height: 80vh;
-    width: 30vw;
+    width: 32vw;
     background: #F5F5F5;
 }
 
@@ -103,7 +103,7 @@ input{
     
 }
 
-.pedido button{
+.infos button{
     min-width: 90px;
     padding: 7px;
     border: 1px solid black;
@@ -256,8 +256,8 @@ input[type=submit]:hover{
 }
 
 .emcapsu{
-    margin-top: 2vh;
-    padding-top: 1vh;
+    margin-top: 3vh;
+    padding-top: 2vh;
     background-color: #F5F5F5;
     border-radius: 5px 5px 5px 5px;
     -webkit-border-radius: 5px 5px 5px 5px;
@@ -271,6 +271,7 @@ input[type=submit]:hover{
 .emcapsu table{
     margin: auto;
     font-size: 1.5vh;
+    margin-top: 1vh;
     border-collapse: collapse;
 }
 
@@ -281,3 +282,58 @@ input[type=submit]:hover{
 th {
     border: 1px solid;
 }
+
+#tableItens button{
+    width: 1.2vw;
+    height: 1.2vw;
+    background-color: #EC7063;
+    color: white;
+    font-size: 1vw;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px 5px 5px 5px;
+    -webkit-border-radius: 5px 5px 5px 5px;
+    -moz-border-radius: 5px 5px 5px 5px;
+}
+
+#tableItens button:hover{
+    color: black;
+}
+
+.pagamento{
+    position: absolute;
+    right: 0px;
+    padding-right: 2vw;
+}
+
+.pagamento h2, section, button{
+    display: inline-block;
+}
+
+.pagamento section{
+    margin-right: 2vw;
+    padding-top: 1vw;
+}
+
+.pagamento select{
+    width: 100%;
+}
+
+.pagamento label, select{
+    display: block;
+}
+
+.pagamento h2{
+    margin-right: 2vw;
+}
+
+.enviarPedido{
+    width: 8vw;
+    height: 5vh;
+    background-color: darkseagreen;
+    border-radius: 11px 11px 11px 11px;
+    -webkit-border-radius: 11px 11px 11px 11px;
+    -moz-border-radius: 11px 11px 11px 11px;
+}
+
