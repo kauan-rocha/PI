@@ -31,7 +31,7 @@
 
                 <span style="width: 40%;">
                     <label for="feditendereco">Endereço:</label>
-                    <input type="text" id="feditendereco" name="feditendereco" style="width: 96%; border: solid 1px;" disabled>
+                    <input type="text" id="feditendereco" name="feditendereco" style="width: 96%; border: solid 1px;" disabled class="desabilitado" readonly>
                 </span>
 
                 <span style="width: 12%;">
@@ -41,7 +41,7 @@
 
                 <span style="width: 30%;">
                     <label for="feditbairro">Bairro:</label>
-                    <input type="text" id="feditbairro" name="feditbairro" style="width: 92%; border: solid 1px;" disabled>
+                    <input type="text" id="feditbairro" name="feditbairro" style="width: 92%; border: solid 1px;" disabled class="desabilitado" readonly>
                 </span>
 
                 <br>
@@ -53,12 +53,12 @@
 
                 <span style="width: 20%;">
                     <label for="feditcidade">Cidade:</label>
-                    <input type="text" id="feditcidade" name="feditcidade" style="width: 90%; border: solid 1px;" disabled>
+                    <input type="text" id="feditcidade" name="feditcidade" style="width: 90%; border: solid 1px;" disabled class="desabilitado" readonly>
                 </span>
 
                 <span style="width: 5%;">
                     <label for="fedituf">UF:</label>
-                    <input type="text" id="fedituf" name="fedituf" style="width: 96%; border: solid 1px;" disabled>
+                    <input type="text" id="fedituf" name="fedituf" style="width: 96%; border: solid 1px;" disabled class="desabilitado" readonly>
                 </span>
 
                 <span style="margin: 2%; float: right;">

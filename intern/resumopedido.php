@@ -7,7 +7,7 @@
 <head>
 </head>
 <body>
-    <div class="emcapsu">
+    <div class="encapsu">
         <table id="tableItens">
             <tr>
                 <th>Qtd</th>

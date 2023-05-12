@@ -31,7 +31,7 @@
 
                 <span style="width: 40%;">
                     <label for="fcadendereco">Endereço:</label>
-                    <input type="text" id="fcadendereco" name="fcadendereco" style="width: 96%; border: solid 1px;">
+                    <input type="text" id="fcadendereco" name="fcadendereco" style="width: 96%; border: solid 1px;" class="desabilitado" readonly>
                 </span>
 
                 <span style="width: 12%;">
@@ -41,7 +41,7 @@
 
                 <span style="width: 30%;">
                     <label for="fcadbairro">Bairro:</label>
-                    <input type="text" id="fcadbairro" name="fcadbairro" style="width: 92%; border: solid 1px;">
+                    <input type="text" id="fcadbairro" name="fcadbairro" style="width: 92%; border: solid 1px;" class="desabilitado" readonly>
                 </span>
 
                 <br>
@@ -53,12 +53,12 @@
 
                 <span style="width: 20%;">
                     <label for="fcadcidade">Cidade:</label>
-                    <input type="text" id="fcadcidade" name="fcadcidade" style="width: 90%; border: solid 1px;">
+                    <input type="text" id="fcadcidade" name="fcadcidade" style="width: 90%; border: solid 1px;" class="desabilitado" readonly>
                 </span>
 
                 <span style="width: 5%;">
                     <label for="fcaduf">UF:</label>
-                    <input type="text" id="fcaduf" name="fcaduf" style="width: 96%; border: solid 1px;">
+                    <input type="text" id="fcaduf" name="fcaduf" style="width: 96%; border: solid 1px;" class="desabilitado" readonly>
                 </span>
 
                 <span style="margin: 2%; float: right;">

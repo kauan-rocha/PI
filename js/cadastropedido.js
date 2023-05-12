@@ -164,7 +164,7 @@ function addPizza(){
     var valor = document.querySelector('#fvalorPizza').value.split(' ')[1];
     var tipo = "P";
 
-    document.querySelector('#fcodpizz').value = "0";
+    document.querySelector('#fcodpizz').value = "";
     document.querySelector('#fquantidadePizz').value = "1";
     document.querySelector('input[id="ffamilia"]').checked = true;
     document.querySelector('#fsabor').value = "";
@@ -176,6 +176,24 @@ function addPizza(){
     addItem(cod, tipo, qtd, sabor, tmn, obs, valor);
 }
 
+async function buscaBebida(){
+    let qtd = document.querySelector('#fquantidadeBebida').value;
+    let bebida = document.querySelector('#fbebida').value;
+
+    var dict = {"#fcodbebida": "cod_beb","#fvalorBebida": "vlr_beb"};
+
+    const data = await  fetch('/pizz/intern/formularios/operacaoform/buscarbebida.php?bebida='+bebida);
+    const retorno = await data.json();
+
+    if(retorno['erro']==false){
+        document.querySelector('#fcodbebida').value = retorno['data'][0]['cod_beb'];  
+        document.querySelector('#fvalorBebida').value = "R$ "+(parseFloat(retorno['data'][0]['vlr_beb']) * parseFloat(qtd)).toFixed(2).toString();  
+
+    }else{
+        document.querySelector('#fvalorBebida').value = "R$ 0.00";
+    }
+}
+
 function addBebida(){
     var cod = document.querySelector('#fcodbebida').value;
     var qtd = document.querySelector('#fquantidadeBebida').value;
@@ -184,6 +202,11 @@ function addBebida(){
     var obs = "";
     var valor = document.querySelector('#fvalorBebida').value.split(' ')[1];
     var tipo = "B";
+
+    document.querySelector('#fcodbebida').value = "";
+    document.querySelector('#fquantidadeBebida').value = "1";
+    document.querySelector('#fbebida').value = "";
+    document.querySelector('#fvalorBebida').value = "R$ 0.00";
 
     addItem(cod, tipo, qtd, bebida, tmn, obs, valor);
 }
@@ -195,10 +218,48 @@ function addItem(cod, tipo, qtd, item, tmn, obs, valor){
         adicional = adicional + "+"+checkbox+" ";
     }
     console.log(adicional);
-    document.getElementById('tableItens').insertAdjacentHTML('beforeend','<tr id="item['+controleItem+']"><td id="cod-item['+controleItem+']" style="display: none;">'+cod+'</td><td id="tipo-item['+controleItem+']" style="display: none;">'+tipo+'</td><td id="qtd-item['+controleItem+']" style="text-align: center;">'+qtd+'</td><td>'+item+'</td><td id="tmn-item['+controleItem+']">'+tmn+'</td><td id="obs-item['+controleItem+']">'+adicional+'</td><td style="text-align: right; padding-right: 0.5vw;">'+valor+'</td><td><button type="button" class="bCancelarItem" onclick="cancelarItem('+controleItem+')">x</button></td></tr>');
+    document.getElementById('tableItens').insertAdjacentHTML('beforeend','<tr id="item['+controleItem+']"><td id="cod-item" style="display: none;"><input name="cod-item['+controleItem+']" id="cod-item['+controleItem+']" type="number" style="display:none;" value="'+cod+'"/>'+cod+'</td><td id="tipo-item" style="display: none;"><input name="tipo-item['+controleItem+']" id="tipo-item['+controleItem+']" type="text" style="display:none;" value="'+tipo+'"/>'+tipo+'</td><td id="qtd-item" style="text-align: center;"><input name="qtd-item['+controleItem+']" id="qtd-item['+controleItem+']" type="number" style="display:none;" value="'+qtd+'"/>'+qtd+'</td><td>'+item+'</td><td id="tmn-item">'+tmn+'</td><td id="obs-item"><input name="obs-item['+controleItem+']" id="obs-item['+controleItem+']" type="text" style="display:none;" value="'+adicional+'"/>'+adicional+'</td><td id="vlr-item" style="text-align: right; padding-right: 0.5vw;">'+valor+'</td><td><button type="button" class="bCancelarItem" onclick="cancelarItem('+controleItem+')">x</button></td></tr>');
     controleItem=controleItem+1;
+    recalculaTotal()
 }
 
 function cancelarItem(id){
     document.getElementById('item['+id+']').remove();
+    recalculaTotal()
+}
+
+function recalculaTotal(){
+    var valorTotalPedido = 0;
+    for (const valores of document.querySelectorAll("#vlr-item")) {    
+        valorTotalPedido = valorTotalPedido + parseFloat(valores.innerHTML);
+    }
+    document.getElementById('fvalortotal').value = valorTotalPedido.toFixed(2);
+    document.querySelector('#total').innerHTML = "Total: R$"+ valorTotalPedido.toFixed(2).toString();
+}
+
+
+function enviarPedido(){
+    if(document.querySelector('#fcpf').value == "" || document.querySelector('#fnome').value == "Cliente não cadastrado" || document.querySelector('#fnome').value == "Cpf não informado"){
+        alert("Informe um CPF de cliente valido!");
+        return false;
+    }
+
+    if(document.querySelector('#fformapagto').value == ""){
+        alert("Informe a forma de pagamento!");
+        return false;
+    }
+
+    var validaitem = document.querySelectorAll("#cod-item");
+    if(validaitem.length == 0){
+        alert("Inclua pelo menos 1 item no pedido!");
+        return false;
+    }else{
+        for (const item of document.querySelectorAll("#cod-item")) {    
+            if(item.querySelector('input').value == ""){
+                alert("Erro no item!! \nValide os itens do pedido.");
+                console.log(item.getElementsByTagName('input').value);
+                return false;
+            }
+        }
+    }
 }

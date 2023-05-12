@@ -37,7 +37,7 @@
                             ped.[DT_PED]	
                         FROM [TB_PED] as ped
                         INNER JOIN [TB_CLI] as cli ON cli.[CPF_CLI] = ped.CPF_CLI
-                        ORDER BY ped.[DT_PED] DESC;
+                        ORDER BY ped.[DT_PED] DESC, ped.[CD_PED] DESC;
                     ";                    
                     $query = $Conexao->query($queryString);
 

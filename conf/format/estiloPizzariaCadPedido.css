@@ -255,7 +255,7 @@ input[type=submit]:hover{
     transition: visibility 0.5s, opacity 0.5s linear;
 }
 
-.emcapsu{
+.encapsu{
     margin-top: 3vh;
     padding-top: 2vh;
     background-color: #F5F5F5;
@@ -265,17 +265,17 @@ input[type=submit]:hover{
     -webkit-box-shadow: 0px 3px 8px 0px rgba(0,0,0,0.13);
     -moz-box-shadow: 0px 3px 8px 0px rgba(0,0,0,0.13);
     box-shadow: 0px 3px 8px 0px rgba(0,0,0,0.13);
-    min-height: 50vh;
+    min-height: 71vh;
 }
 
-.emcapsu table{
+.encapsu table{
     margin: auto;
     font-size: 1.5vh;
     margin-top: 1vh;
     border-collapse: collapse;
 }
 
-.emcapsu table, td {
+.encapsu table, td {
     border-bottom: 1px solid;
 }
 
@@ -304,16 +304,11 @@ th {
 .pagamento{
     position: absolute;
     right: 0px;
-    padding-right: 2vw;
-}
-
-.pagamento h2, section, button{
-    display: inline-block;
 }
 
 .pagamento section{
+    display: inline-block;
     margin-right: 2vw;
-    padding-top: 1vw;
 }
 
 .pagamento select{
@@ -325,7 +320,7 @@ th {
 }
 
 .pagamento h2{
-    margin-right: 2vw;
+    font-size: 3vh;
 }
 
 .enviarPedido{
@@ -337,3 +332,7 @@ th {
     -moz-border-radius: 11px 11px 11px 11px;
 }
 
+.desabilitado{
+    background-color: #F0F0F0;
+    border: 1px solid #CDCDCD;
+}

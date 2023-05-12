@@ -20,6 +20,9 @@
     <?php include("./intern/estrutura/menu.php") ?>
 
     <div class="pedido">
+
+        <form action="/pizz/intern/formularios/operacaoform/cadastrarpedido.php" method="POST" onsubmit="return enviarPedido()">
+
         <div class="resumo">
             <?php include("./intern/resumopedido.php") ?>
         </div>
@@ -28,7 +31,7 @@
             <div class="formCliente">
                 <h3>Cliente</h3>
                 <hr/>
-                <form action="" method="POST">
+                    <input name="fcpffunc" id="fcpffunc" type="text" style="display:none;" value="<?php echo $_SESSION["sessaoCpf"]?>">
                     <span style="width: 15%;">
                         <label for="fcpf">CPF:</label>
                         <input type="text" maxlength="11" placeholder="Pesquisar" id="fcpf" name="fcpf" style="width: 90%; border: solid 1px;">
@@ -75,13 +78,11 @@
                         <button type="button" onclick="AbrirEditaCliente()">Editar</button>
                         <button type="button" onclick="AbrirCadastraCliente()">Criar</button>
                     </span>
-                </form>
             </div>
 
             <div class="formPizza">
                 <h3>Pizza</h3>
                 <hr/>
-                <form action="" method="POST">
                     <input name="fcodpizz" id="fcodpizz" type="number" style="display:none;" value="">
                     <span style="width: 20%;">
                         <label for="fquantidadePizz" style="display: inline-block;">Quantidade:</label>
@@ -123,22 +124,21 @@
 
                     <span style="width: 30%; padding-top: 2%;">
                         <label for="fvalorPizza" style="display: inline-block;">Valor:&nbsp;</label>
-                        <input type="text" id="fvalorPizza" name="fvalorPizza" value="R$ 0,00" style="width: 30%; display: inline-block;" disabled>
+                        <input type="text" id="fvalorPizza" name="fvalorPizza" value="R$ 0.00" style="width: 30%; display: inline-block;" disabled>
                     </span>
                     <span style="padding-top: 1%; float: right;">
                         <button type="button" id="fbutAddPizz" onclick="addPizza()">Adicionar +</button>
                     </span>
                     <br>
-                </form>
+                
             </div>
 
             <div class="formBebida">
                 <h3>Bebida</h3>
                 <hr/>
-                <form action="" method="POST">
                 <input name="fcodbebida" id="fcodbebida" type="number" style="display:none;" value="">
                     <span style="width: 30%;">
-                        <label for="fquantidadeBebida" style="display: inline-block;">Quantidade:</label>
+                        <label for="fquantidadeBebida" onchange="buscaBebida()" style="display: inline-block;">Quantidade:</label>
                         <input type="text" id="fquantidadeBebida" name="fquantidadeBebida" value="1" style="width: 20%; display: inline-block; border: solid 1px;">
                     </span>
                     
@@ -146,9 +146,9 @@
 
                     <span style="width: 100%;">
                         <label for="fbebida" style="display: inline-block;">Bedida:&nbsp;</label>
-                        <input type="text" id="fbebida" placeholder="Digite para pesquisar" name="fbebida" style="width: 60%; display: inline-block;" >
+                        <input type="text" id="fbebida" onchange="buscaBebida()" placeholder="Digite para pesquisar" name="fbebida" style="width: 60%; display: inline-block;" >
                         <label for="fvalorBebida" style="display: inline-block;">Total:</label>
-                        <input type="text" id="fvalorBebida" name="fvalorBebida" style="width: 20%; display: inline-block;" disabled>
+                        <input type="text" id="fvalorBebida" name="fvalorBebida" value="R$ 0.00" style="width: 20%; display: inline-block;" disabled>
                     </span>
 
                     <br>
@@ -156,14 +156,17 @@
                         <input id="fbutAddBebida" type="button" onclick="addBebida()" value="Adicionar +">
                     </span>
                     <br> <br>
-                </form>
+                
 
             </div>
         </div>
 
         <div class="venda">
             <div class="pagamento">
-                <h2>Total: R$120,00</h2>
+                <section>
+                    <input name="fvalortotal" id="fvalortotal" type="text" style="display:none;" value="">
+                    <h2 id="total">Total: R$0.00</h2>
+                </section>
                 <section>
                     <label for="fformapagto">Forma de pagamento</lable>
                     <select name="fformapagto" id="fformapagto">
@@ -172,10 +175,10 @@
                         <option value="E">Dinheiro</option>
                     </select>
                 </section>
-                <button class="enviarPedido" type="button" onclick="enviarPedido()">Enviar Pedido</button>
+                <section><button class="enviarPedido" type="submit">Enviar Pedido</button></section>
             </div>
-            
         </div>
+        </form>
     </div>
 
     <div class="fundopopup" id="cadastracliente" style="display: none;">
@@ -192,6 +195,10 @@
                 echo "<div id='msg-box' style='background-color: darkseagreen;'><p>Cadastro realizado com sucesso!!</p></div>";
             elseif($_GET["resp"] == "erroinfo")
                 echo "<div id='msg-box' style='background-color: #EC7063;'><p>Erro no cadastro! Valide os campos do formulário.</p></div>";
+            elseif($_GET["resp"] == "suss")
+                echo "<div id='msg-box' style='background-color: darkseagreen;'><p>PEDIDO REALIZADO COM SUCESSO!!</p></div>";
+            elseif($_GET["resp"] == "erro")
+                echo "<div id='msg-box' style='background-color: #EC7063;'><p>Erro no pedido! Tente novamente.</p></div>";
         }
     ?>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
